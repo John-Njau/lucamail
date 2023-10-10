@@ -1,0 +1,46 @@
+productName: LucaMail
+appId: com.raghavyuva.lucamail
+asar: true
+files:
+  - build/
+  - package.json
+  - src/main/index.js
+  - src/main
+  - src/renderer
+  - src/renderer/dist
+  - splashscreen.html
+  - dist
+  - tailwind.config.js
+  - package.json
+  - '*.js'
+  - build
+  - node_modules
+dmg:
+  contents:
+    - x: 130
+      'y': 220
+    - x: 410
+      'y': 220
+      type: link
+      path: /Applications
+win:
+  icon: src/main/helpers/assets/lucamail.ico
+  target:
+    - zip
+    - nsis
+  publish:
+    - github
+nsis:
+  oneClick: true
+  perMachine: true
+linux:
+  icon: src/main/helpers/lucamail.png
+  category: Development
+  target:
+    - "AppImage"
+    - "deb"
+    - "rpm"
+    - "snap"
+directories:
+  buildResources: "resources"
+  output: "release"
